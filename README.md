@@ -1,8 +1,9 @@
 # Edutask: a Training System for PA1417
 
 Group members:
-Elias Andersson
-Alin Stegler
+Elias Andersson,
+
+Albin Stegler
 
 [![GitHub](https://img.shields.io/github/license/JulianFrattini/edutask)](./LICENSE)
 
