@@ -7,7 +7,6 @@ emailValidator = re.compile(r'.*@.*')
 class UserController(Controller):
     def __init__(self, dao: DAO):
         super().__init__(dao=dao)
-
     def get_user_by_email(self, email: str):
         """Given a valid email address of an existing account, return the user object contained in the database associated 
         to that user. For now, do not assume that the email attribute is unique. Additionally print a warning message containing the email
