@@ -20,9 +20,13 @@ jobs:
       - name: Install dependencies
         run: |
           echo "Installing dependencies"
-          cd ./backend
+          pwd  # Prints the current working directory
+          ls -l  # Lists files in the current directory
           python -m pip install --upgrade pip
-          pip install -r requirements.pip
+          cd backend
+          ls -l  # Lists files in the backend directory
+          pip install -r requirements.txt
+
       - name: Unit tests
         run: |
           echo "Running unittests"
