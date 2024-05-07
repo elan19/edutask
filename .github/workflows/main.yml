@@ -1,7 +1,12 @@
 name: Test Python Setup
 
-on: [push, pull_request, workflow_dispatch]
-
+on: 
+  push: 
+    branches: ["assignment6"]
+  pull_request: 
+      branches: ["assignment6"]
+  workflow_dispatch:
+  
 jobs:
   test:
     runs-on: ubuntu-latest
