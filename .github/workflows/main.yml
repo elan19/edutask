@@ -11,7 +11,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
       - name: Set up Python 3.10
         uses: actions/setup-python@v3
         with:
@@ -20,13 +20,9 @@ jobs:
       - name: Install dependencies
         run: |
           echo "Installing dependencies"
-          pwd  # Prints the current working directory
-          ls -l  # Lists files in the current directory
           python -m pip install --upgrade pip
-          cd backend
-          ls -l  # Lists files in the backend directory
+          cd ./backend
           pip install -r requirements.txt
-
       - name: Unit tests
         run: |
           echo "Running unittests"
