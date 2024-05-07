@@ -13,22 +13,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python 3.10
-      - uses: actions/setup-python@v4
-      - with:
+        uses: actions/setup-python@v3
+        with:
           python-version: '3.10'
           cache: 'pip'
       - name: Install dependencies
-        run:
+        run: |
           echo "Installing dependencies"
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           cd backend
       - name: Unit tests
-        run:
+        run: |
           echo "Running unittests"
           pytest ./backend -m unit
       - name: Integration Tests
-        run:
+        run: |
           echo "Running integrationtests"
           pytest ./backend -m integration
-  
