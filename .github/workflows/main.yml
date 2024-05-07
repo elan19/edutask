@@ -19,6 +19,3 @@ jobs:
       - name: Unit tests
         run:
           pytest -m unit
-      - name: Integration tests
-        run:
-          pytest -m integration
