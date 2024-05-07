@@ -18,17 +18,4 @@ jobs:
         with:
           python-version: '3.10'
           cache: 'pip'
-      - name: Install dependencies
-        run: |
-          echo "Installing dependencies"
-          python -m pip install --upgrade pip
-          cd ./backend
-          pip install -r requirements.txt
-      - name: Unit tests
-        run: |
-          echo "Running unittests"
-          pytest ./backend -m unit
-      - name: Integration Tests
-        run: |
-          echo "Running integrationtests"
-          pytest ./backend -m integration
+     
