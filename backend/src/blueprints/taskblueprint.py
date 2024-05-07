@@ -23,7 +23,7 @@ def create():
         for key in ['title', 'description', 'start', 'due', 'userid', 'url']:
             if key in data and isinstance(data[key], list):
                 data[key] = data[key][0]
-
+        print(data)
         taskid = controller.create(data)
         tasks = controller.get_tasks_of_user(userid)
         return jsonify(tasks), 200
