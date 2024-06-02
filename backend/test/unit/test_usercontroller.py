@@ -22,8 +22,9 @@ def test_corr_email():
 @pytest.mark.unit
 def test_no_matching_user():
     mockusercontroller = mock.MagicMock()
-    mockusercontroller.find.return_value = None
+    mockusercontroller.find.return_value = []
     sut = UserController(dao=mockusercontroller)
+    
     assert sut.get_user_by_email("email@email.com") is None
 
 @pytest.mark.unit

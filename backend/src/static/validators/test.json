@@ -1,0 +1,20 @@
+{
+    "$jsonSchema": {
+        "bsonType": "object",
+        "required": [
+            "name"
+        ],
+        "properties": {
+            "name": {
+                "bsonType": "string",
+                "description": "the first name of a user must be determined",
+                "uniqueItems": true
+            },
+            "test": {
+                "bsonType": "string",
+                "description": "the last name of a user must be determined",
+                "uniqueItems": true
+            }
+        }
+    }
+}
